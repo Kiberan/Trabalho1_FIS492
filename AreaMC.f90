@@ -28,4 +28,14 @@ program AreaMC
     real(kind=dp) :: dentro     !Responsável pela contagem de pontos dentro
                                 !da circunferência
     real(kind=dp) :: razao      !Talvez eu use essa variável para a lógica
+
+                            !Laço de Repetição:
+    do k=1, ciclos
+        call random_number(x)
+        call random_number(y)
+        write(*,*) ciclos-k
+        if (x**2 + y**2 < 1) then
+            dentro = dentro + 1
+        end if
+    end do
 end program
