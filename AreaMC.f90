@@ -14,4 +14,18 @@ program AreaMC
     !estabelecido
 !----------------------------------------------------------------------------------
     
+    !Definindo nome para as precisões e adicionando modulo iso_fortran_env
+    !que nos permite utilizar o rng padronizado do Fortran
+    use, intrinsic :: iso_fortran_env, only: sp => real32, dp => real64, i4 => int32, i8 => int64
+    implicit none
+
+    real(kind=dp) :: x
+    real(kind=dp) :: y  !Coordenadas (x,y) de um ponto do Quadrado
+    integer(kind=i8) :: ciclos  !Ciclos corresponderá a quantidade de pontos
+                                !totais para o cálculo da aproximação
+                                !Será nossa variável auxiliar para o laço
+                                !de repetição
+    real(kind=dp) :: dentro     !Responsável pela contagem de pontos dentro
+                                !da circunferência
+    real(kind=dp) :: razao      !Talvez eu use essa variável para a lógica
 end program
