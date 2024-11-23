@@ -34,8 +34,8 @@ program AreaMC
     call generator%init(seed)
                             !Laço de Repetição:
     do k=1, ciclos
-        call random_number(x)
-        call random_number(y)
+        x = generator%rnd()
+        y = generator%rnd()
         if (x**2 + y**2 < 1) then
             dentro = dentro + 1
         end if
