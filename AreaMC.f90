@@ -40,6 +40,5 @@ program AreaMC
             dentro = dentro + 1
         end if
     end do
-    write(*,*) 4*  real(dentro,dp)/real(ciclos,dp)
-    read(*,*)k !Tecla apenas para fechar o programa no PowerShell
+    write(*,*) "O valor aproximado para π foi:" , 4* real(dentro,dp)/real(ciclos,dp)
 end program
