@@ -19,7 +19,8 @@ program AreaMC
     use rndgen_mod
     use, intrinsic :: iso_fortran_env, only: sp => real32, dp => real64, i4 => int32, i8 => int64
     implicit none
-
+    integer(kind=i4) :: seed = 123456
+    type(rndgen) :: generator
     real(kind=dp) :: x
     real(kind=dp) :: y  !Coordenadas (x,y) de um ponto do Quadrado
     integer(kind=i8) :: ciclos = 10000  !Ciclos corresponderá a quantidade de pontos
@@ -30,6 +31,7 @@ program AreaMC
                                 !da circunferência
     real(kind=dp) :: razao      !Talvez eu use essa variável para a lógica
     integer(kind=i8) :: k       !Variável auxiliar para o Laço de Repetição
+    call generator%init(seed)
                             !Laço de Repetição:
     do k=1, ciclos
         call random_number(x)
