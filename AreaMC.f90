@@ -28,7 +28,7 @@ program AreaMC
     real(kind=dp) :: dentro     !Responsável pela contagem de pontos dentro
                                 !da circunferência
     real(kind=dp) :: razao      !Talvez eu use essa variável para a lógica
-
+    integer(kind=i8) :: k       !Variável auxiliar para o Laço de Repetição
                             !Laço de Repetição:
     do k=1, ciclos
         call random_number(x)
